@@ -1,0 +1,20 @@
+section.posts {
+  grid-column: 2/6;
+  margin: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+}
+.nopost {
+  min-width: 100%;
+  min-height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media all and (max-width: 1235px) {
+  section.posts {
+    grid-column: 1/-1;
+  }
+}

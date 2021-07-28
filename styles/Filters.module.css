@@ -1,0 +1,20 @@
+.filters {
+    width: 100%;
+    height: 75px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #fff;
+  }
+  .filters input[type="text"],
+  .dateToggle {
+    min-width: 30%;
+    max-width: 33%;
+    max-height: 2rem;
+    font-size: 1.2rem;
+    padding: 0.2rem;
+    font-family: "Open Sans", sans-serif;
+    background-color: #fff;
+    color: #2d2d2a;
+    border: 1px solid #2d2d2a;
+  }

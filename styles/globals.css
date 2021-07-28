@@ -1,16 +1,85 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
+
+a {
+  text-decoration: none;
+}
+
+body div.container{
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: min-content auto;
+  gap: 20px;
+  min-height: 100vh;
+  background-color: #EEE;
+}
+body div header {
+  background-color: #574ae2;
+  color: #fff;
+  padding: 1.5rem;
+  grid-column: 1/-1;
+  display: flex;
+  justify-content: space-between;
+}
+body div header h1{
+  font-size: 3.2rem;
+  font-weight: 400;
+  color: #fff;
+  letter-spacing: 4px;
+  font-family: "Luckiest Guy", cursive;
+}
+header span{
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  word-spacing: 5px;
+  display: block;
+  font-family: "Luckiest Guy", cursive;
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  min-width: fit-content;
+}
+header nav a {
+  margin: 0px 0.5rem;
+  color: #CDC1FF;
+  font-size: 1.5rem;
+  font-family: "Luckiest Guy", cursive;
+}
+header nav a:hover, header nav a:focus {
+    font-size: 1.7rem;
+    transition: all 150ms;
+    color: #fff;
+}
+@media all and (max-width: 1235px){
+  body{
+    grid-template-columns: repeat(5 , 1fr);
+  }
+}
+@media all and (max-width: 786px){
+  html{
+    font-size: 13px;
+  }
+  body{
+    grid-template-columns: 1fr
+  }
+  body header{
+    flex-direction: column;
+  }
+  body header nav{
+    margin-top: 0.8rem;
+  }
+}
+@media all and (max-width:425px) {
+    html{
+      font-size: 11px;
+    }
+}
+
