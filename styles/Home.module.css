@@ -13,7 +13,14 @@
   border: 1px solid #2d2d2a;
   position: relative;
 }
-
+.nopost {
+  grid-column: 2/6;
+  min-width: 100%;
+  min-height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .buttons {
   display: flex;
   justify-content: space-between;

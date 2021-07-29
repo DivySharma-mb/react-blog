@@ -1,0 +1,100 @@
+div.inputField {
+  grid-column: 2/6;
+  width: 100%;
+  min-height: 100vh;
+  margin: 1rem;
+}
+.inputField form {
+  width: 100%;
+  min-height: 97vh;
+  border-radius: 1rem;
+  background-color: white;
+  margin: auto;
+  padding: 1rem;
+}
+
+.inputField form h2 {
+  font-size: 3rem;
+  color: #2d2d2a;
+  margin: auto;
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+}
+.inputField form span {
+  font-size: 1.1rem;
+  color: #666;
+  margin: auto;
+}
+.title,
+.content,
+.cover {
+  border-width: 0px;
+  color: #2d2d2a;
+  width: 100%;
+  max-width: 100%;
+  min-width: 100%;
+  font-family: "Open Sans", sans-serif;
+  padding: 0.2rem;
+  margin: 0.5rem, 0rem;
+}
+.title {
+  font-size: 2rem;
+}
+.cover {
+  font-size: 1.2rem;
+}
+.content {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  min-height: 80vh;
+}
+.inputFieldButtons {
+  width: 60%;
+  min-width: fit-content;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+.save,
+.cancel {
+  width: 45%;
+  min-width: fit-content;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.2rem;
+  padding: 5px;
+  background-color: #fff;
+  color: #2d2d2a;
+  border: 1px solid #2d2d2a;
+}
+.save:hover {
+  background-color: green;
+  color: #fff;
+}
+.cancel:hover {
+  background-color: red;
+  color: #fff;
+}
+.errorDisplay {
+  width: 80%;
+  margin: auto;
+}
+.errorDisplay div {
+  background-color: rgba(238, 85, 43, 0.65);
+  text-align: center;
+  color: #fff;
+  font-size: 1.2rem;
+  font-family: "Open Sans", sans-serif;
+  border-radius: 8px;
+  padding: 0.2rem;
+  margin: 0.3rem;
+}
+
+@media all and (max-width: 720px) {
+  div.inputField {
+    grid-column: 1/-1;
+    height: 100vh;
+  }
+  div.inputField form {
+    min-width: 95%;
+  }
+}

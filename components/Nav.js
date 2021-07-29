@@ -1,8 +1,6 @@
-import useUser from "../SWR/useUser";
 import Link from "next/link";
 
-export default function Nav() {
-  const { user, error, isValidating } = useUser();
+export default function Nav({user}) {
   return (
     <nav className="header-nav">
       <Link href="/">
@@ -15,7 +13,7 @@ export default function Nav() {
           </Link>
           <Link href="/logout">
             <a>Logout</a>
-          </Link>  
+          </Link>
         </>
       ) : (
         <>

@@ -41,6 +41,8 @@
   margin: 1rem 0rem;
 }
 .post .text span {
+  max-width: 100%;
+  word-wrap: break-word;
   font-family: inherit;
   font-size: 1.2rem;
   font-weight: 400;
