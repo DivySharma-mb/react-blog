@@ -82,7 +82,7 @@ export default function Register() {
         <h2 className={styles.heading}>Register</h2>
         <div className={styles.errorDisplay}>
           {errorMessage.map((error) => {
-            return <div>{error}</div>;
+            return <div key={error}>{error}</div>;
           })}
         </div>
         <label htmlFor="fname">

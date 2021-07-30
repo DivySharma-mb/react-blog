@@ -1,11 +1,11 @@
 import styles from "../../styles/Post.module.css";
 import Head from "next/head";
+
 import Link from "next/link";
 
 import router from "next/router";
 
 export default function Post({ post, postID, user }) {
-
   async function deletePost(e) {
     e.preventDefault();
     try {
@@ -46,32 +46,33 @@ export default function Post({ post, postID, user }) {
           <span className={styles.author}>
             -by <a href={`/user/${post.authorId}`}>{post.author}</a>
           </span>
-          <span className={styles.date}>
-            ({post.date}) <br />
+          <span className={styles.date}>({post.date})</span>
+          <div>
             {user.id ? (
               user.id === post.authorId ||
               user.role === "editor" ||
               user.role === "admin" ? (
                 <Link href={`/editor?id=${postID}`}>
-                  <a>Edit Post</a>
+                  <a className={styles.options}>Edit Post</a>
                 </Link>
               ) : (
                 ""
               )
             ) : (
               ""
-            )}
-            {" | "}
+            )}{" "}
             {user.id ? (
               user.id === post.authorId || user.role === "admin" ? (
-                <button onClick={deletePost}>Delete Post</button>
+                <button className={styles.options} onClick={deletePost}>
+                  | Delete Post
+                </button>
               ) : (
                 ""
               )
             ) : (
               ""
             )}
-          </span>
+          </div>
         </header>
 
         <div

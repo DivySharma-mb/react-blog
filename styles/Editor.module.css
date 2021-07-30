@@ -88,7 +88,14 @@ div.inputField {
   padding: 0.2rem;
   margin: 0.3rem;
 }
-
+.unAuth {
+  grid-column: 2/6;
+  position: "fixed";
+  width: "100%";
+  min-height: "70vh";
+  text-align: center;
+  font-size: 2rem;
+}
 @media all and (max-width: 720px) {
   div.inputField {
     grid-column: 1/-1;

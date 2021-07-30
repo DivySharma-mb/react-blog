@@ -20,9 +20,9 @@ export default function PostCard({post}) {
         </span>
         <span>{post.date}</span>
         <span>
-          {post.postContent.slice(0, 100)}
-          <Link href={`/posts/${post.id}`}>
-            <a>(Click to read more)</a>
+          {post.postContent.slice(0, 100) + '...'}
+          <Link href={`/post/${post.id}`}>
+            <a>(Read more?)</a>
           </Link>
         </span>
       </div>

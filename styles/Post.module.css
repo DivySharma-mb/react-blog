@@ -52,6 +52,15 @@ article.article .content {
 article.article .content * {
   all: revert;
 }
+.options{
+  all: unset;
+  cursor: pointer;
+  text-decoration: underline;
+  border: none;
+  font-size: 1.2rem;
+  background-color: #fff;
+  color: black;
+}
 @media all and (max-width: 1235px) {
   article.article {
     grid-column: 1/-1;

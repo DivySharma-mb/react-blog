@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/router";
 import styles from "../styles/Editor.module.css";
 import Head from "next/head";
+import Link from "next/link";
 
 export default function Editor({ post, user }) {
   const [postTitle, setPostTitle] = useState("");
@@ -17,7 +18,7 @@ export default function Editor({ post, user }) {
         setPostContent(post.postContent);
       }
     }
-  }, []);
+  }, [router.query.id, post]);
 
   function handleCancel(e) {
     e.preventDefault();
@@ -87,9 +88,16 @@ export default function Editor({ post, user }) {
       alert("Something went wrong. Please try again later.");
     }
   }
-  if(!user.id){
-    alert("You need to log-in first!");
-    router.push('/login');
+  if (!user.id) {
+    return (
+      <div className={styles.unAuth}>
+        You must{" "}
+        <Link href="/login">
+          <a>log in</a>
+        </Link>{" "}
+        first.
+      </div>
+    );
   }
   return (
     <>

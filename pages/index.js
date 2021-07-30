@@ -47,7 +47,7 @@ export default function Home({ posts, user }) {
             filteredPostList.reverse().slice((page - 1) * 15, page * 15)
           );
     }
-  }, [author, dateToggle, contentKeyword, page]);
+  }, [author, dateToggle, contentKeyword, page, data]);
 
   return (
     <>
